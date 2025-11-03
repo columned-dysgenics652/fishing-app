@@ -30,7 +30,7 @@ export const PlayerController = () => {
   const tipRef = useRef();
   const prevBeta = useRef(0);
   const isCatching = useRef(false);
-
+  const hookSensor = useRef();
   const setHookPosition = useStore((state) => state.setHookPosition);
 
   const [curve] = useState(
@@ -46,7 +46,7 @@ export const PlayerController = () => {
       ])
   );
 
-  const ropeSegmentSize = 0.5;
+  const ropeSegmentSize = 0.65;
 
   useRopeJoint(rodTip, j1, [[0, 0, 0], [0, 0, 0], ropeSegmentSize]);
   useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], ropeSegmentSize]);
@@ -112,6 +112,7 @@ export const PlayerController = () => {
         delta
       );
     }
+    hookSensor.current.setTranslation(hook.current.translation());
   };
 
   const getMobilePitchVelocity = (b, delta) => {
@@ -155,6 +156,7 @@ export const PlayerController = () => {
 
     updateCannePosition(delta, b, g, a);
     const isCatchingNow = getMobilePitchVelocity(b, delta);
+    // hook.current.translation().y = 1
     trackFish(delta, isCatchingNow);
     updateRope(delta);
     setHookPosition({
@@ -278,6 +280,27 @@ export const PlayerController = () => {
         <BallCollider args={[0.1]} />
       </RigidBody>
       <RigidBody
+        // onIntersectionEnter={(payload) => {
+        //   if (fishBody.current || isCatching.current) {
+        //     return;
+        //   }
+
+        //   if (payload.other.rigidBody.userData.type === "fish") {
+        //     fishBody.current = payload.other.rigidBody;
+        //     payload.other.rigidBody.userData.hook();
+        //   }
+        // }}
+        // sensor
+        canSleep={false}
+        ref={hook}
+        position={[-1.258, -0.3, 0]}
+        colliders={false}
+        type="dynamic"
+        {...ropeDamping}
+      >
+        <BallCollider args={[0.1]} />
+      </RigidBody>
+            <RigidBody
         onIntersectionEnter={(payload) => {
           if (fishBody.current || isCatching.current) {
             return;
@@ -290,13 +313,13 @@ export const PlayerController = () => {
         }}
         sensor
         canSleep={false}
-        ref={hook}
+        ref={hookSensor}
         position={[-1.258, -0.3, 0]}
         colliders={false}
         type="dynamic"
         {...ropeDamping}
       >
-        <BallCollider args={[1]} />
+        <BallCollider args={[0.1]} />
       </RigidBody>
       <group ref={hookMesh} position={[0, 0, 0]}>
         <Hook />
